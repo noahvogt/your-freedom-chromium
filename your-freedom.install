@@ -1,0 +1,31 @@
+pre_install() {
+  cat <<EOM
+  == IMPORTANT NOTICE ==
+
+  This package will help you identify nonfree packages that are installed
+  on your system at the time of its installation, as well as protecting
+  you from (accidentally) installing them.
+
+  Also, if any other nonfree package is identified, later updates will ask
+  you for its removal.
+
+  Have in mind that, if you want to retain certain nonfree packages
+  installed on your system, you'll have to remove your-freedom :)
+
+  If you find out any of the following:
+  * Cascade package removal due to nonfree dependencies,
+  * Your-freedom conflicting with a libre package,
+  * Etc.
+
+  Please report back to the Parabola Project on the usual channels:
+  * https://labs.parabola.nu
+  * mailto:assist@lists.parabola.nu
+  * irc://irc.libera.chat/#parabola
+EOM
+}
+
+pre_upgrade() {
+  pre_install
+}
+
+# vim:set ts=2 sw=2 et:
